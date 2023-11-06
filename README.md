@@ -12,3 +12,9 @@ It allows writing Redis modules in Rust, without needing to use raw pointers or 
     * Linux: `redis-server --loadmodule ./target/debug/examples/lib{{crate_name}}.so`
     * Mac: `redis-server --loadmodule ./target/debug/examples/lib{{crate_name}}.dylib`
 5. Open a Redis CLI, and run `HELLO.MUL 31 11`.
+
+# Generate Redis Module Project
+
+1. [Install cargo-generate](https://cargo-generate.github.io/cargo-generate/installation.html)
+2. Run `cargo generate artikell/redismodule-rs-template --name first-redis-module`
+3. Run `cd first-redis-module && cargo build`
