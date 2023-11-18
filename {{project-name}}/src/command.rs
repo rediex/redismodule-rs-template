@@ -2,7 +2,7 @@ pub mod command{
 
     use redis_module::{Context, RedisError, RedisResult, RedisString};
 
-    pub fn hello_mul(_: &Context, args: Vec<RedisString>) -> RedisResult {
+    pub fn {{crate_name}}_mul(_: &Context, args: Vec<RedisString>) -> RedisResult {
         if args.len() < 2 {
             return Err(RedisError::WrongArity);
         }
