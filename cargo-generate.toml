@@ -2,3 +2,9 @@
 ignore = [
     "Cargo.lock"
 ]
+
+[hooks]
+pre = ["pre-script.rhai"]
+
+[placeholders]
+license = { type = "string", prompt = "What license to use?", choices = ["APACHE", "MIT"], default = "MIT" }
