@@ -9,9 +9,11 @@ It allows writing Redis modules in Rust, without needing to use raw pointers or 
 2. [Install Redis](https://redis.io/download), most likely using your favorite package manager (Homebrew on Mac, APT or YUM on Linux)
 3. Run `cargo build`
 4. Start a redis server with the `hello` module
-    * Linux: `redis-server --loadmodule ./target/debug/examples/lib{{crate_name}}.so`
-    * Mac: `redis-server --loadmodule ./target/debug/examples/lib{{crate_name}}.dylib`
-5. Open a Redis CLI, and run `HELLO.MUL 31 11`.
+    * Linux: `redis-server --loadmodule ./target/debug/lib{{crate_name}}.so`
+    * Mac: `redis-server --loadmodule ./target/debug/lib{{crate_name}}.dylib`
+5. Open a Redis CLI, and run `{{crate_name}}.MUL 31 11`.
+6. Run a test, `bash run-test.sh`
+
 
 # Generate Redis Module Project
 
