@@ -1,6 +1,4 @@
 mod command;
-mod test;
-mod utils;
 
 use redis_module::{redis_module};
 use crate::command::command::hello_mul;
